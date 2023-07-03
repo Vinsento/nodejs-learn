@@ -19,3 +19,12 @@ export const printHelp = () => {
     `)
   )
 }
+
+export const printWeather = (res) => {
+  console.log(
+    dedent(`${chalk.bgYellow(' SUCCESS ')} Погода в городе ${res.name}
+    ${res.weather[0].description}
+    Температура: ${Math.floor(res.main.temp)}℃
+    Влажность: ${res.main.humidity}%`)
+  )
+}
